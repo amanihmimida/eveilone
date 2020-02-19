@@ -11,7 +11,7 @@
 	<groupId>tn.enig</groupId>
 	<artifactId>Eveil-2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>Eveil-2</name>
 	<description>Exemple App1</description>
 
