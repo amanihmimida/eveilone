@@ -14,7 +14,7 @@ public class SwaggerConfig {
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("tn.enig.controller"))
                 .paths(PathSelectors.any())
-                //.paths(PathSelectors.regex("/api/**"))
+                .paths(PathSelectors.regex("/api/*"))
                 .build();
     }
 
