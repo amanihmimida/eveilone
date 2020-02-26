@@ -28,6 +28,16 @@ public List<Antenne> listAntenne() {
 public Optional<Antenne> getAntenneById(int idAntenne) {
 	return antenneRepository.findById(idAntenne);
 }
+
+public Antenne getAntenneByNum(String numAntenne) throws Exception{
+	try {
+		return antenneRepository.findByNum(numAntenne);
+	} catch (Exception e) {
+		throw new Exception("Pas d'antenne avec le num "+numAntenne);
+	}
+}
+
+
 public void deletAntenneById (int idAntenne) {
 	antenneRepository.deleteById(idAntenne);
 }

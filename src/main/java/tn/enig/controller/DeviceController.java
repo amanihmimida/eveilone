@@ -35,6 +35,10 @@ public class DeviceController {
 		return deviceService.getDeviceById(id);
 	}
 	
+	@GetMapping(path="/by-num/{numDevice}")
+	public Device getByNum(@PathVariable(value="numDevice") String numDevice) throws Exception {
+		return deviceService.getByNum(numDevice);
+	}
 	@PostMapping(path="/")
 	public void addDevice(@RequestBody Device d) {
 		deviceService.save(d);

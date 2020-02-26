@@ -27,6 +27,14 @@ public List<Device> listDevice() {
 public Optional<Device> getDeviceById(int idDevice) {
 	return deviceRepository.findById(idDevice);
 }
+public Device getByNum(String numDevice) throws Exception {
+	try {
+		return deviceRepository.findByNum(numDevice);
+	} catch (Exception e) {
+		throw new Exception("Pas de device avec le num "+numDevice);
+	}
+	
+}
 public void deleteDeviceById (int idDevice) {
 	deviceRepository.deleteById(idDevice);
 }

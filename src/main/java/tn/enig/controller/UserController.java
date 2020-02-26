@@ -31,6 +31,10 @@ public class UserController {
 	public Optional<User> getUserById(@PathVariable(value="id") int id) {
 		return userService.getUserById(id);
 	}
+	@GetMapping(path="/by-mail/{mail}")
+	public User getByMail(@PathVariable(value="mail") String mail) throws Exception {
+		return userService.getByMail(mail);
+	}
 	
 	@PostMapping(path="/")
 	public void addUser(@RequestBody User u) {

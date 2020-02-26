@@ -7,5 +7,5 @@ import tn.enig.model.Device;
 
 @Repository
 public interface IDeviceRepository extends CrudRepository<Device, Integer>{
-
+ public Device findByNum(String num) ;
 }

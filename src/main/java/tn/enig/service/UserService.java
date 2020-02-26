@@ -29,6 +29,13 @@ public class UserService {
 	public Optional<User> getUserById(int idUser) {
 		return userRepository.findById(idUser);
 	}
+	public User getByMail(String mail) throws Exception {
+		try {
+		return userRepository.findByMail(mail);
+	}catch (Exception e) {
+	  throw new Exception("Pas d'utilisateur avec l'adresse mail "+mail);
+	}
+	}
 	public void deleteUserById (int idUser) {
 		 userRepository.deleteById(idUser);
 	}

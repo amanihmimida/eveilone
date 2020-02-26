@@ -7,5 +7,5 @@ import tn.enig.model.User;
 
 @Repository
 public interface IUserRepository extends CrudRepository<User, Integer> {
-
+  public User findByMail(String mail) ;
 }

@@ -32,13 +32,18 @@ public class AntenneController {
 		return antenneService.getAntenneById(id);
 	}
 	
+	@GetMapping(path="/by-num/{num}")
+	public Antenne getAntenneByNum(@PathVariable(value="num") String num) throws Exception {
+		return antenneService.getAntenneByNum(num);
+	}
+	
 	@PostMapping(path="/")
-	public void addAntenne(@RequestBody Antenne u) {
-		antenneService.save(u);
+	public void addAntenne(@RequestBody Antenne a) {
+		antenneService.save(a);
 	}
 	@PutMapping(path="/")
-	public void editAntenne(Antenne u) {
-		antenneService.save(u);
+	public void editAntenne(Antenne a) {
+		antenneService.save(a);
 	}
     
 	@DeleteMapping(path="/{id}")
